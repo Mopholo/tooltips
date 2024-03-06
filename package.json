@@ -1,9 +1,9 @@
 {
-  "name": "@svelte-plugins/tooltips",
-  "version": "3.0.0",
+  "name": "@svelte-proceve/tooltips",
+  "version": "3.0.1",
   "license": "MIT",
   "description": "A simple tooltip action and component designed for Svelte.",
-  "author": "Kieran Boyle (https://github.com/dysfunc)",
+  "author": "Kieran Boyle (https://github.com/dysfunc) modifed by Mopholo (https://github.com/mopholo)",
   "type": "module",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/svelte-plugins/tooltips.git"
+    "url": "https://github.com/Mopholo/tooltips.git"
   },
   "files": [
     "dist",
@@ -34,8 +34,8 @@
     },
     "./package.json": "./package.json"
   },
-  "homepage": "https://github.com/svelte-plugins/tooltips",
-  "bugs": "https://github.com/svelte-plugins/tooltips/issues",
+  "homepage": "https://github.com/Mopholo/tooltips",
+  "bugs": "https://github.com/Mopholo/tooltips/issues",
   "scripts": {
     "start": "npm --prefix ./docs install && vite & npm --prefix ./docs run dev",
     "dev": "vite",
@@ -78,5 +78,8 @@
   },
   "peerDependencies": {
     "svelte": "^3.54.0 || ^4.0.0 || ^5.0.0-next.0"
+  },
+  "dependencies": {
+    "pnpm": "^8.15.4"
   }
 }

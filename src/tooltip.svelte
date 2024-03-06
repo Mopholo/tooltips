@@ -82,6 +82,13 @@
     left: 0
   };
 
+  /** @type {any} */
+  let offset = {
+    x: 0,
+    y: 0,
+  };
+
+
   // @ts-ignore
   const detect = ({ target }) => {
     if (
@@ -116,7 +123,7 @@
       position = inverse[position];
     }
 
-    coords = computeTooltipPosition(containerRef, tooltipRef, position, coords);
+    coords = computeTooltipPosition(containerRef, tooltipRef, position, coords,offset);
 
     if (animation) {
       animationEffect = animation;
@@ -214,7 +221,8 @@
         containerRef,
         tooltipRef,
         position,
-        coords
+        coords,
+        offset,
       );
     }
   };

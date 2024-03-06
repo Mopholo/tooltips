@@ -22,8 +22,36 @@ export const tooltip = (element, props) => {
   }
 
   if (title) {
-    element.removeAttribute('title');
-    config.content = title;
+    let handleTitle = config.handleTitle ?  config.handleTitle : 'ignore';
+
+    //'ignore' | 'addTag' | 'remove' | 'remove-replace'
+    switch (handleTitle) {
+      // Remove it, but don't overide content 
+      case 'remove':
+        if (title)
+          element.removeAttribute('title');  
+      break; 
+
+      case 'remove-replace':
+        // Remove it, and overide content 
+        if (title) {
+          element.removeAttribute('title');
+          config.content = title;
+        }
+      break; 
+
+      // Add a title attribute and passed in 
+      case 'addTag':
+        if (config.titleTag)
+          element.setAttribute('title', config.titleTag);
+        else 
+          element.setAttribute('title', 'attribute titleTag not set!');
+      break; 
+
+      default:
+      break; 
+
+    }
   }
 
   const onClick = () => {

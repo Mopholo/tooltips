@@ -20,10 +20,10 @@
   /** @type {string | {component: any, props?: Record<string, any>}} */
   export let content = '';
 
-  /** @type {'left' | string} */
+  /** @type {'left' | 'right' | 'center' | 'justify' | 'star' | 'end' | string} */
   export let align = 'left';
 
-  /** @type {'top' | string} */
+  /** @type {'left' | 'right' | 'top' | 'bottom' | string} */
   export let position = 'top';
 
   /** @type {number} */
@@ -73,6 +73,12 @@
     left: 0
   };
 
+  /** @type {any} */
+  let offset = {
+    x: 0,
+    y: 0,
+  }
+
   const animationDelay = animation ? delay : 0;
 
   onMount(() => {
@@ -111,7 +117,8 @@
       targetElement,
       tooltipRef,
       position,
-      coords
+      coords,
+      offset,
     );
 
     if (animation) {
@@ -136,7 +143,8 @@
         targetElement,
         tooltipRef,
         position,
-        coords
+        coords,
+        offset,
       );
     }
   };

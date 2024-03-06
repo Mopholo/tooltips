@@ -60,7 +60,8 @@ export const computeTooltipPosition = (
   containerRef,
   tooltipRef,
   position,
-  coords
+  coords,
+  offset,
 ) => {
   if (!containerRef || !tooltipRef) {
     return coords;
@@ -166,8 +167,8 @@ export const computeTooltipPosition = (
       break;
   }
 
-  coords.top += window.scrollY;
-  coords.left += window.scrollX;
+  coords.top += window.scrollY + offset.y;
+  coords.left += window.scrollX + offset.x;
 
   return coords;
 };

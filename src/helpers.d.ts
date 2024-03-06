@@ -16,9 +16,15 @@ interface TooltipCoords {
   left: number;
 }
 
+interface ToolTipOffset {
+  x : number, 
+  y : number, 
+}
+
 export declare function computeTooltipPosition(
   containerRef: HTMLElement | null,
   tooltipRef: HTMLElement | null,
   position: string,
-  coords: TooltipCoords
+  coords: TooltipCoords,
+  offset : ToolTipOffset,
 ): TooltipCoords;
