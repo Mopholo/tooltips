@@ -50,6 +50,20 @@
   /** @type {boolean} */
   export let show = false;
 
+  /** @type {any} */
+  export let coords = {
+    bottom: 0,
+    top: 0,
+    right: 0,
+    left: 0
+  };
+
+  /** @type {any} */
+  export let offset = {
+    x: 0,
+    y: 0,
+  }
+
   /** @type {HTMLDivElement | null} */
   let tooltipRef = null;
 
@@ -65,19 +79,6 @@
   /** @type {boolean} */
   let visible = false;
 
-  /** @type {any} */
-  let coords = {
-    bottom: 0,
-    top: 0,
-    right: 0,
-    left: 0
-  };
-
-  /** @type {any} */
-  let offset = {
-    x: 0,
-    y: 0,
-  }
 
   const animationDelay = animation ? delay : 0;
 
