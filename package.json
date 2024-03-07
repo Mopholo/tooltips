@@ -1,5 +1,5 @@
 {
-  "name": "@svelte-proceve/tooltips",
+  "name": "@svelte-mopholo/tooltips",
   "version": "3.0.1",
   "license": "MIT",
   "description": "A simple tooltip action and component designed for Svelte.",
