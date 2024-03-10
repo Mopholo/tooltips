@@ -50,6 +50,15 @@
   /** @type {boolean} */
   export let show = false;
 
+  /** @type {any} */
+  export let offset = {
+    x: 0,
+    y: 0,
+  };
+
+   /** @type {boolean} */
+  export let titleFillContent = false; 
+
   /** @type {HTMLSpanElement | null} */
   let containerRef = null;
 
@@ -82,11 +91,9 @@
     left: 0
   };
 
-  /** @type {any} */
-  let offset = {
-    x: 0,
-    y: 0,
-  };
+  titleFillContent = titleFillContent;
+
+  
 
 
   // @ts-ignore

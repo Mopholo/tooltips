@@ -64,6 +64,9 @@
     y: 0,
   }
 
+   /** @type boolean */
+   export let titleFillContent = false; 
+
   /** @type {HTMLDivElement | null} */
   let tooltipRef = null;
 
@@ -79,8 +82,9 @@
   /** @type {boolean} */
   let visible = false;
 
-
   const animationDelay = animation ? delay : 0;
+
+  titleFillContent = titleFillContent
 
   onMount(() => {
     if (tooltipRef !== null) {

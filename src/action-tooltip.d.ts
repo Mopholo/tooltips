@@ -81,15 +81,15 @@ export interface TooltipActionProps {
 
    /**
    * How to manage title attribute on element 
-   * @default 'ignore'
+   * @default 'false
    */
-   handleTitle?: 'ignore' | 'addTag' | 'remove' | 'remove-replace' | string;
+   titleFillContent?: boolean;
 
    /**
-   * automatically set title attribute if handleTitle = addTag
-   * @default ''
+   * manipulate the final poistion of a tooltip
+   * @default {x:0,y:0}
    */
-  titleTag?: string;
+   offset?: any;
 }
 
 export interface TooltipActionEvents {}

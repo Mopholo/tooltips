@@ -67,6 +67,7 @@ export const computeTooltipPosition = (
     return coords;
   }
 
+
   const tooltipRect = tooltipRef.getBoundingClientRect();
   const containerRect = containerRef.getBoundingClientRect();
   const containerPosition = window.getComputedStyle(containerRef).position;
@@ -144,8 +145,7 @@ export const computeTooltipPosition = (
     currentElement = currentElement.parentElement;
   }
 
-  let finalTop =
-    containerRect.top + cumulativeOffsetTop + stickyOffsetTop - fixedOffsetTop;
+  let finalTop = containerRect.top + cumulativeOffsetTop + stickyOffsetTop - fixedOffsetTop;
   let finalLeft = containerRect.left + cumulativeOffsetLeft - fixedOffsetLeft;
 
   switch (position) {
@@ -154,7 +154,8 @@ export const computeTooltipPosition = (
       coords.left = finalLeft + containerRect.width / 2;
       break;
     case 'bottom':
-      coords.top = finalTop - tooltipRect.height;
+
+      coords.top = finalTop + (containerRect.height - tooltipRect.height);
       coords.left = finalLeft + containerRect.width / 2;
       break;
     case 'left':

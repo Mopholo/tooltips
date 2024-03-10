@@ -79,6 +79,26 @@ export interface TooltipProps {
    * @default ''
    */
   theme?: string;
+
+  
+  /**
+   * The theme of the tooltip.
+   * @default {x:0,y:0}
+   */
+  offset?: any;
+
+    /**
+   * The theme of the tooltip.
+   * @default false
+   * 
+   **/
+   titleFillContent?: boolean;
+ 
+  /**
+   * The theme of the tooltip.
+   * @default ''
+   */
+  theme?: string;
 }
 
 export interface TooltipEvents {}
